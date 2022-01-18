@@ -40,7 +40,8 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
 
      (auto-completion :variables
-            auto-completion-enable-sort-by-usage t)
+            auto-completion-enable-sort-by-usage t
+            auto-completion-private-snippets-directory "~/.emacs.d/spacemacs/snippets/")
 
      better-defaults
 
@@ -62,7 +63,7 @@ This function should only modify configuration layer settings."
      (org :variables
             org-directory (expand-file-name "~/Documents/org")
             org-enable-org-journal-support t
-            org-journal-dir "~/Documents/org/journal/"
+            org-journal-dir (concat org-directory "/journal")
             org-enable-roam-support t
             org-roam-directory (concat org-directory "/roam")
             org-roam-db-location (concat org-roam-directory "/db/org-roam.db"))
