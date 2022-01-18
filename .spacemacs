@@ -579,6 +579,9 @@ before packages are loaded."
   ;; auto newline at 80th column in org mode
   (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
   (add-hook 'org-mode-hook 'auto-fill-mode)
+
+  ;; MAYBE? re-bind yasnippet expansion to tab key
+  (global-set-key (kbd "TAB") 'hippie-expand)
 )
 
 
