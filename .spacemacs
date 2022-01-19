@@ -580,8 +580,8 @@ before packages are loaded."
   (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
   (add-hook 'org-mode-hook 'auto-fill-mode)
 
-  ;; SKETCHY re-bind yasnippet expansion to tab key
-  (global-set-key (kbd "TAB") 'hippie-expand)
+  ;; re-bind yasnippet expansion to shift-tab
+  (global-set-key (kbd "<backtab>") 'hippie-expand)
 )
 
 
