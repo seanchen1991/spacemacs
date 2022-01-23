@@ -62,9 +62,8 @@ This function should only modify configuration layer settings."
 
      (org :variables
             org-directory (expand-file-name "~/Documents/org")
-            org-enable-org-journal-support t
-            org-journal-dir (concat org-directory "/journal")
             org-enable-roam-support t
+            org-roam-completion-everywhere t
             org-roam-directory (concat org-directory "/roam")
             org-roam-db-location (concat org-roam-directory "/db/org-roam.db"))
 
