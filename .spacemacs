@@ -583,6 +583,9 @@ before packages are loaded."
 
   ;; re-bind yasnippet expansion to shift-tab
   (global-set-key (kbd "<backtab>") 'hippie-expand)
+
+  ;; bind shift-return to indent a new comment line
+  (global-set-key (kbd "<S-return>") 'indent-new-comment-line)
 )
 
 
