@@ -51,9 +51,9 @@ This function should only modify configuration layer settings."
      git
 
      (haskell :variables
-              haskell-completion-backend 'lsp
-              lsp-haskell-process-path-hie "haskell-language-server-wrapper"
-              haskell-enable-hindent t)
+            haskell-completion-backend 'lsp-mode
+            lsp-haskell-process-path-hie "haskell-language-server-wrapper"
+            haskell-enable-hindent t)
 
      helm
 
@@ -586,13 +586,6 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  ;; manually install haskell lsp-mode
-  (require 'lsp)
-  (require 'lsp-haskell)
-  ;; hooks so haskell and literate haskell major modes trigger LSP setup
-  (add-hook 'haskell-mode-hook #'lsp)
-  (add-hook 'haskell-literate-mode-hook #'lsp)
-
   ;; add more org todo states
   (with-eval-after-load 'org
     (setq org-todo-keywords
