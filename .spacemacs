@@ -603,6 +603,9 @@ before packages are loaded."
 
   ;; bind shift-return to indent a new comment line
   (global-set-key (kbd "<S-return>") 'indent-new-comment-line)
+
+  ;; remember and restore the last cursor location of opened files
+  (save-place-mode 1)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
