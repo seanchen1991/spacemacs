@@ -56,6 +56,8 @@ This function should only modify configuration layer settings."
 
      helm
 
+     html
+
      (lsp :variables
             lsp-rust-server 'rust-analyzer
             lsp-rust-analyzer-server-display-inlay-hints t
@@ -92,6 +94,11 @@ This function should only modify configuration layer settings."
      syntax-checking
 
      themes-megapack
+
+     (typescript :variables
+            typescript-fmt-on-save t
+            typescript-fmt-tool 'typescript-formatter
+            typescript-linter 'tslint)
 
      version-control
 
@@ -597,6 +604,10 @@ before packages are loaded."
   ;; auto newline at 80th column in org mode
   (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
   (add-hook 'org-mode-hook 'auto-fill-mode)
+
+  ;; auto newline at 80th column in markdown mode
+  (add-hook 'markdown-mode-hook '(lambda () (setq fill-column 80)))
+  (add-hook 'markdown-mode-hook 'auto-fill-mode)
 
   ;; re-bind yasnippet expansion to shift-tab
   (global-set-key (kbd "<backtab>") 'hippie-expand)
