@@ -615,6 +615,9 @@ before packages are loaded."
   ;; bind shift-return to indent a new comment line
   (global-set-key (kbd "<S-return>") 'indent-new-comment-line)
 
+  ;; bind Cmd-/ to comment out a line
+  (global-set-key (kbd "s-/") 'comment-line)
+
   ;; remember and restore the last cursor location of opened files
   (save-place-mode 1)
 )
